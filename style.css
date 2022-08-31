@@ -1,0 +1,32 @@
+*,::after,::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+h1,#value{
+    font-size: 5rem;
+    color: darkblue;
+
+}
+button{
+    height: 30px;
+    width: 100px;
+    margin-right: 20px;
+    background-color: black;
+    color: white;
+    border-radius: 07px;
+    
+}
+button:hover{
+    outline: solid darkblue;
+    background-color: beige;
+    border-style: none;
+    color: black;
+}
