@@ -1,19 +1,28 @@
-let count=0;
+let count = 0;
 // Dom Element
-const btns=document.querySelectorAll('.btn');
-const value= document.getElementById("value")
-btns.forEach(function(btn){
+const btns = document.querySelectorAll('.btn');
+const value = document.getElementById("value")
+btns.forEach(function (btn) {
  btn.addEventListener("click", function (e) {
-  const check=e.currentTarget.classList;
+  const check = e.currentTarget.classList;
   if (check.contains("increase")) {
-   count ++
+   count++
   }
-   else if(check.contains("decrease")){
+  else if (check.contains("decrease")) {
    count--
   }
-  else{
-   count=0
+  else {
+   count = 0
   }
-  value.textContent=count
+  if (count < 0) {
+   value.style.color = "red"
+  }
+  if (count > 0) {
+   value.style.color = "green"
+  }
+  if (count == 0) {
+   value.style.color = "darkblue"
+  }
+  value.textContent = count
  })
 })
